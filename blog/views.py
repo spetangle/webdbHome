@@ -12,8 +12,10 @@ def index(request):
 
 
 def content(request,postid):
-    post = model_to_dict(BlogsPost.objects.get(id=postid))
-    print(post)
+    if int(postid) > 0:
+        post = model_to_dict(BlogsPost.objects.get(id=postid))
+    else:
+        post = {}
     return render(request,'showpost.html', {'post':post})
 
 

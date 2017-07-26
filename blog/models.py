@@ -12,7 +12,7 @@ class BlogsPost(models.Model):
 
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('id','title', 'timestamp')
+    list_display = ('id', 'title', 'timestamp')
 
 
 admin.site.register(BlogsPost, BlogPostAdmin)
